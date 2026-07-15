@@ -1,0 +1,205 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial,sans-serif;
+    background:#f5f7fa;
+}
+
+header{
+    background:#166534;
+    position:fixed;
+    width:100%;
+    top:0;
+    z-index:1000;
+}
+
+.navbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 40px;
+}
+
+.logo{
+    color:white;
+}
+
+.navigation{
+    display:flex;
+    list-style:none;
+    gap:20px;
+}
+
+.navigation a{
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+.navigation a:hover{
+    color:gold;
+}
+
+.hero{
+    text-align:center;
+    padding:120px 20px 50px;
+    background:linear-gradient(135deg,#166534,#22c55e);
+    color:white;
+}
+
+/* Carousel */
+
+.carousel{
+    width:90%;
+    max-width:900px;
+    height:350px;
+    margin:40px auto;
+    overflow:hidden;
+    border-radius:20px;
+    box-shadow:0 5px 20px rgba(0,0,0,0.2);
+}
+
+.slides{
+    display:flex;
+    width:400%;
+    height:100%;
+    animation:slide 16s infinite;
+}
+
+.slides img{
+    width:25%;
+    height:100%;
+    object-fit:cover;
+}
+
+@keyframes slide{
+
+    0%,20%{
+        transform:translateX(0);
+    }
+
+    25%,45%{
+        transform:translateX(-25%);
+    }
+
+    50%,70%{
+        transform:translateX(-50%);
+    }
+
+    75%,95%{
+        transform:translateX(-75%);
+    }
+
+    100%{
+        transform:translateX(0);
+    }
+}
+
+/* Skills */
+
+.skills-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
+    padding:40px;
+}
+
+.skill-card{
+    background:white;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+    transition:0.3s;
+}
+
+.skill-card:hover{
+    transform:translateY(-8px);
+}
+
+.skill-card img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+}
+
+.skill-card h2{
+    color:#166534;
+    padding:15px;
+}
+
+.skill-card ul{
+    padding:0 30px 20px;
+}
+
+/* Progress Bars */
+
+.progress-section{
+    width:80%;
+    margin:40px auto;
+}
+
+.progress-section h2{
+    text-align:center;
+    margin-bottom:30px;
+    color:#166534;
+}
+
+.progress{
+    width:100%;
+    background:#ddd;
+    border-radius:20px;
+}
+
+.progress div{
+    color:white;
+    text-align:center;
+    padding:10px;
+    border-radius:20px;
+}
+
+.html{
+    width:90%;
+    background:#166534;
+}
+
+.css{
+    width:85%;
+    background:#22c55e;
+}
+
+.canva{
+    width:95%;
+    background:#2563eb;
+}
+
+.github{
+    width:75%;
+    background:#1d4ed8;
+}
+
+footer{
+    text-align:center;
+    padding:20px;
+    background:#166534;
+    color:white;
+}
+
+@media(max-width:768px){
+
+    .navbar{
+        flex-direction:column;
+    }
+
+    .navigation{
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+    .carousel{
+        height:250px;
+    }
+}

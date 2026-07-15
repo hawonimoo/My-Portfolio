@@ -1,0 +1,132 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:Arial, sans-serif;
+background:#f5f7fa;
+color:#333;
+}
+
+header{
+background:#166534;
+position:fixed;
+width:100%;
+top:0;
+z-index:1000;
+}
+
+.navbar{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 40px;
+}
+
+.logo{
+color:white;
+}
+
+.navigation{
+display:flex;
+gap:20px;
+list-style:none;
+}
+
+.navigation a{
+color:white;
+text-decoration:none;
+font-weight:bold;
+}
+
+.navigation a:hover{
+color:gold;
+}
+
+.hero{
+text-align:center;
+padding:120px 20px 60px;
+background:linear-gradient(135deg,#166534,#22c55e);
+color:white;
+}
+
+.projects-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+gap:30px;
+padding:50px;
+}
+
+.project-card{
+background:white;
+border-radius:20px;
+overflow:hidden;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+transition:0.3s;
+}
+
+.project-card:hover{
+transform:translateY(-10px);
+}
+
+.project-card img{
+width:100%;
+height:250px;
+object-fit:cover;
+}
+
+.content{
+padding:20px;
+}
+
+.content h2{
+color:#166534;
+margin-bottom:10px;
+}
+
+.tag{
+display:inline-block;
+background:#e5f7e5;
+color:#166534;
+padding:6px 12px;
+border-radius:20px;
+margin:5px;
+font-size:14px;
+}
+
+.btn{
+display:inline-block;
+padding:10px 20px;
+background:#2563eb;
+color:white;
+text-decoration:none;
+border-radius:25px;
+transition:0.3s;
+}
+
+.btn:hover
+
+footer{
+text-align:center;
+background:#166534;
+color:white;
+padding:20px;
+}
+
+@media(max-width:768px){
+.navbar{
+    flex-direction:column;
+}
+
+.navigation{
+    flex-wrap:wrap;
+    justify-content:center;
+}
+
+.projects-grid{
+    padding:20px;
+}
+
+}
