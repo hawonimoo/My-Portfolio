@@ -5,15 +5,19 @@
 }
 
 body{
-    font-family:Arial,sans-serif;
+    font-family:Arial, sans-serif;
     background:#f5f7fa;
+    color:#333;
+    line-height:1.6;
+    padding-top:90px;
 }
 
+/* Header */
 header{
     background:#166534;
     position:fixed;
-    width:100%;
     top:0;
+    width:100%;
     z-index:1000;
 }
 
@@ -22,6 +26,20 @@ header{
     justify-content:space-between;
     align-items:center;
     padding:15px 40px;
+}
+
+.logo-container{
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+.logo-img{
+    width:50px;
+    height:50px;
+    border-radius:50%;
+    object-fit:cover;
+    border:3px solid white;
 }
 
 .logo{
@@ -38,21 +56,27 @@ header{
     color:white;
     text-decoration:none;
     font-weight:bold;
+    transition:0.3s;
 }
 
 .navigation a:hover{
     color:gold;
 }
 
+/* Hero Section */
 .hero{
     text-align:center;
-    padding:120px 20px 50px;
+    padding:70px 20px;
     background:linear-gradient(135deg,#166534,#22c55e);
     color:white;
 }
 
-/* Carousel */
+.hero h1{
+    font-size:3rem;
+    margin-bottom:10px;
+}
 
+/* Carousel */
 .carousel{
     width:90%;
     max-width:900px;
@@ -60,7 +84,7 @@ header{
     margin:40px auto;
     overflow:hidden;
     border-radius:20px;
-    box-shadow:0 5px 20px rgba(0,0,0,0.2);
+    box-shadow:0 5px 20px rgba(0,0,0,0.15);
 }
 
 .slides{
@@ -77,30 +101,14 @@ header{
 }
 
 @keyframes slide{
-
-    0%,20%{
-        transform:translateX(0);
-    }
-
-    25%,45%{
-        transform:translateX(-25%);
-    }
-
-    50%,70%{
-        transform:translateX(-50%);
-    }
-
-    75%,95%{
-        transform:translateX(-75%);
-    }
-
-    100%{
-        transform:translateX(0);
-    }
+    0%,20%{transform:translateX(0);}
+    25%,45%{transform:translateX(-25%);}
+    50%,70%{transform:translateX(-50%);}
+    75%,95%{transform:translateX(-75%);}
+    100%{transform:translateX(0);}
 }
 
-/* Skills */
-
+/* Skills Grid */
 .skills-grid{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
@@ -113,11 +121,17 @@ header{
     border-radius:20px;
     overflow:hidden;
     box-shadow:0 5px 15px rgba(0,0,0,0.1);
-    transition:0.3s;
+    transition:all 0.3s ease;
 }
 
 .skill-card:hover{
     transform:translateY(-8px);
+    background:#166534;
+    color:white;
+}
+
+.skill-card:hover h2{
+    color:white;
 }
 
 .skill-card img{
@@ -135,11 +149,10 @@ header{
     padding:0 30px 20px;
 }
 
-/* Progress Bars */
-
+/* Progress Section */
 .progress-section{
     width:80%;
-    margin:40px auto;
+    margin:50px auto;
 }
 
 .progress-section h2{
@@ -148,10 +161,20 @@ header{
     color:#166534;
 }
 
+.progress-box{
+    margin-bottom:20px;
+}
+
+.progress-box p{
+    margin-bottom:8px;
+    font-weight:bold;
+}
+
 .progress{
     width:100%;
     background:#ddd;
     border-radius:20px;
+    overflow:hidden;
 }
 
 .progress div{
@@ -181,6 +204,7 @@ header{
     background:#1d4ed8;
 }
 
+/* Footer */
 footer{
     text-align:center;
     padding:20px;
@@ -188,35 +212,43 @@ footer{
     color:white;
 }
 
-@media(max-width:768px){
+/* Responsive */
+@media (max-width:768px){
 
     .navbar{
         flex-direction:column;
+        gap:10px;
+        padding:10px;
     }
 
     .navigation{
         flex-wrap:wrap;
         justify-content:center;
+        gap:10px;
+    }
+
+    .hero{
+        padding:50px 15px;
+    }
+
+    .hero h1{
+        font-size:2rem;
     }
 
     .carousel{
-        height:250px;
+        width:95%;
+        height:220px;
     }
-}
-.logo-container{display:flex;
-    align-items:center;
-    gap:10px;}
-    
-.logo-img{
-    width:50px;
-    height:50px;
-    object-fit:cover;
-    border-radius:50%;
-    border:5px solid white;
-    box-shadow:0 5px 20px rgba(12, 12, 230, 0.3);
-}
 
-.logo{
-    color:white;
-    margin:0;
+    .skills-grid{
+        padding:20px;
+    }
+
+    .skill-card img{
+        height:180px;
+    }
+
+    .progress-section{
+        width:95%;
+    }
 }
