@@ -12,7 +12,8 @@ body{
     padding-top:90px;
 }
 
-/* Header */
+/* HEADER */
+
 header{
     background:#166534;
     position:fixed;
@@ -63,10 +64,11 @@ header{
     color:gold;
 }
 
-/* Hero Section */
+/* HERO */
+
 .hero{
     text-align:center;
-    padding:70px 20px;
+    padding:80px 20px;
     background:linear-gradient(135deg,#166534,#22c55e);
     color:white;
 }
@@ -76,11 +78,12 @@ header{
     margin-bottom:10px;
 }
 
-/* Carousel */
+/* CAROUSEL */
+
 .carousel{
     width:90%;
-    max-width:900px;
-    height:350px;
+    max-width:1000px;
+    height:400px;
     margin:40px auto;
     overflow:hidden;
     border-radius:20px;
@@ -101,19 +104,35 @@ header{
 }
 
 @keyframes slide{
-    0%,20%{transform:translateX(0);}
-    25%,45%{transform:translateX(-25%);}
-    50%,70%{transform:translateX(-50%);}
-    75%,95%{transform:translateX(-75%);}
-    100%{transform:translateX(0);}
+
+    0%,20%{
+        transform:translateX(0);
+    }
+
+    25%,45%{
+        transform:translateX(-25%);
+    }
+
+    50%,70%{
+        transform:translateX(-50%);
+    }
+
+    75%,95%{
+        transform:translateX(-75%);
+    }
+
+    100%{
+        transform:translateX(0);
+    }
 }
 
-/* Skills Grid */
+/* SKILLS */
+
 .skills-grid{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-    gap:25px;
-    padding:40px;
+    gap:30px;
+    padding:50px;
 }
 
 .skill-card{
@@ -121,17 +140,11 @@ header{
     border-radius:20px;
     overflow:hidden;
     box-shadow:0 5px 15px rgba(0,0,0,0.1);
-    transition:all 0.3s ease;
+    transition:0.3s;
 }
 
 .skill-card:hover{
-    transform:translateY(-8px);
-    background:#166534;
-    color:white;
-}
-
-.skill-card:hover h2{
-    color:white;
+    transform:translateY(-10px);
 }
 
 .skill-card img{
@@ -146,19 +159,25 @@ header{
 }
 
 .skill-card ul{
-    padding:0 30px 20px;
+    padding:0 30px 25px;
 }
 
-/* Progress Section */
+.skill-card li{
+    margin-bottom:10px;
+}
+
+/* PROGRESS */
+
 .progress-section{
-    width:80%;
+    width:90%;
+    max-width:900px;
     margin:50px auto;
 }
 
 .progress-section h2{
     text-align:center;
-    margin-bottom:30px;
     color:#166534;
+    margin-bottom:30px;
 }
 
 .progress-box{
@@ -171,9 +190,8 @@ header{
 }
 
 .progress{
-    width:100%;
     background:#ddd;
-    border-radius:20px;
+    border-radius:30px;
     overflow:hidden;
 }
 
@@ -181,7 +199,8 @@ header{
     color:white;
     text-align:center;
     padding:10px;
-    border-radius:20px;
+    border-radius:30px;
+    font-weight:bold;
 }
 
 .html{
@@ -204,31 +223,45 @@ header{
     background:#1d4ed8;
 }
 
-/* Footer */
+/* FOOTER */
+
 footer{
-    text-align:center;
-    padding:20px;
     background:#166534;
     color:white;
+    text-align:center;
+    padding:25px;
+    margin-top:30px;
 }
 
-/* Responsive */
-@media (max-width:768px){
+/* TABLET */
+
+@media(max-width:992px){
 
     .navbar{
         flex-direction:column;
         gap:10px;
-        padding:10px;
     }
 
     .navigation{
         flex-wrap:wrap;
         justify-content:center;
-        gap:10px;
+    }
+
+    .hero h1{
+        font-size:2.5rem;
+    }
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+    body{
+        padding-top:130px;
     }
 
     .hero{
-        padding:50px 15px;
+        padding:60px 20px;
     }
 
     .hero h1{
@@ -236,8 +269,7 @@ footer{
     }
 
     .carousel{
-        width:95%;
-        height:220px;
+        height:250px;
     }
 
     .skills-grid{
@@ -245,10 +277,6 @@ footer{
     }
 
     .skill-card img{
-        height:180px;
-    }
-
-    .progress-section{
-        width:95%;
+        height:200px;
     }
 }
