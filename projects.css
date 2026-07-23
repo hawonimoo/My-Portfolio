@@ -4,6 +4,10 @@
     box-sizing:border-box;
 }
 
+html{
+    scroll-behavior:smooth;
+}
+
 body{
     font-family:Arial, sans-serif;
     background:#f5f7fa;
@@ -41,7 +45,6 @@ header{
     object-fit:cover;
     border-radius:50%;
     border:3px solid white;
-    box-shadow:0 0 15px rgba(255,255,255,0.4);
 }
 
 .logo{
@@ -50,8 +53,8 @@ header{
 
 .navigation{
     display:flex;
-    gap:20px;
     list-style:none;
+    gap:20px;
 }
 
 .navigation a{
@@ -80,8 +83,7 @@ header{
 }
 
 .hero p{
-    max-width:700px;
-    margin:auto;
+    font-size:1.1rem;
 }
 
 /* PROJECTS */
@@ -98,23 +100,20 @@ header{
     border-radius:20px;
     overflow:hidden;
     box-shadow:0 5px 15px rgba(0,0,0,0.1);
-    transition:0.3s;
+    transition:all 0.4s ease;
 }
 
 .project-card:hover{
     transform:translateY(-10px);
-    box-shadow:0 15px 30px rgba(0,0,0,0.15);
+    background:linear-gradient(135deg,#2563eb,#22c55e);
+    color:white;
+    box-shadow:0 10px 30px rgba(37,99,235,0.4);
 }
 
 .project-card img{
     width:100%;
     height:250px;
     object-fit:cover;
-    transition:0.3s;
-}
-
-.project-card:hover img{
-    transform:scale(1.05);
 }
 
 .content{
@@ -126,12 +125,8 @@ header{
     margin-bottom:10px;
 }
 
-.content p{
-    margin-bottom:15px;
-}
-
-.content h4{
-    margin-bottom:10px;
+.project-card:hover h2{
+    color:white;
 }
 
 .tag{
@@ -142,12 +137,16 @@ header{
     border-radius:20px;
     margin:5px;
     font-size:14px;
-    font-weight:bold;
+}
+
+.project-card:hover .tag{
+    background:white;
+    color:#166534;
 }
 
 .btn{
     display:inline-block;
-    padding:12px 25px;
+    padding:10px 20px;
     background:#2563eb;
     color:white;
     text-decoration:none;
@@ -157,7 +156,11 @@ header{
 
 .btn:hover{
     background:#1d4ed8;
-    transform:translateY(-3px);
+}
+
+.project-card:hover .btn{
+    background:white;
+    color:#2563eb;
 }
 
 /* FOOTER */
@@ -166,35 +169,24 @@ footer{
     background:#166534;
     color:white;
     text-align:center;
-    padding:25px;
-    margin-top:20px;
+    padding:20px;
+    margin-top:40px;
 }
 
-/* TABLET */
+/* RESPONSIVE */
 
-@media(max-width:992px){
+@media(max-width:768px){
 
     .navbar{
         flex-direction:column;
         gap:10px;
+        padding:10px;
     }
 
     .navigation{
         flex-wrap:wrap;
         justify-content:center;
-    }
-
-    .hero h1{
-        font-size:2.5rem;
-    }
-}
-
-/* MOBILE */
-
-@media(max-width:768px){
-
-    body{
-        padding-top:130px;
+        gap:10px;
     }
 
     .hero{
@@ -207,10 +199,24 @@ footer{
 
     .projects-grid{
         padding:20px;
-        gap:20px;
     }
 
     .project-card img{
-        height:220px;
+        height:200px;
+    }
+}
+
+@media(max-width:480px){
+
+    .hero h1{
+        font-size:1.8rem;
+    }
+
+    .hero p{
+        font-size:0.9rem;
+    }
+
+    .projects-grid{
+        grid-template-columns:1fr;
     }
 }

@@ -213,13 +213,6 @@ header{
     transform:translateY(-10px);
 }
 
-/* VIDEO */
-
-.video-section{
-    text-align:center;
-    padding:50px 20px;
-}
-
 .video-section h2{
     color:#166534;
     margin-bottom:20px;

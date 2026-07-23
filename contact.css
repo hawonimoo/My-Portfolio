@@ -4,12 +4,16 @@
     box-sizing:border-box;
 }
 
+html{
+    scroll-behavior:smooth;
+}
+
 body{
     font-family:Arial, sans-serif;
     background:#f5f7fa;
     color:#333;
     line-height:1.6;
-    padding-top:100px;
+    padding-top:90px;
 }
 
 /* HEADER */
@@ -68,7 +72,7 @@ header{
 
 .hero{
     text-align:center;
-    padding:70px 20px;
+    padding:80px 20px;
     background:linear-gradient(135deg,#166534,#22c55e);
     color:white;
 }
@@ -78,10 +82,11 @@ header{
     margin-bottom:10px;
 }
 
-/* CONTACT */
+/* CONTACT SECTION */
 
 .contact-container{
-    max-width:1200px;
+    width:95%;
+    max-width:1400px;
     margin:auto;
     padding:50px 20px;
     display:grid;
@@ -89,44 +94,142 @@ header{
     gap:30px;
 }
 
-.contact-info,
+/* CONTACT INFO */
+
+.contact-info{
+    background:white;
+    padding:25px;
+    border-radius:20px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+    transition:0.4s;
+}
+
+.contact-info:hover{
+    transform:translateY(-10px);
+    background:linear-gradient(135deg,#2563eb,#22c55e);
+    color:white;
+}
+
+.contact-info img{
+    width:100%;
+    height:250px;
+    object-fit:cover;
+    border-radius:15px;
+    margin-bottom:20px;
+}
+
+.contact-info h2{
+    color:#166534;
+    margin-bottom:15px;
+}
+
+.contact-info:hover h2,
+.contact-info:hover h3{
+    color:white;
+}
+
+.info{
+    margin-top:15px;
+}
+
+.info h3{
+    margin-bottom:5px;
+}
+
+.info h3 i{
+    color:#2563eb;
+    margin-right:10px;
+}
+
+.contact-info:hover .info h3 i{
+    color:white;
+}
+
+/* EMAIL & PHONE LINKS */
+
+.info a{
+    color:#166534;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+.contact-info:hover .info a{
+    color:white;
+}
+
+/* SOCIAL LINKS */
+
+.social-links{
+    margin-top:20px;
+}
+
+.social-links a{
+    display:inline-block;
+    margin-right:15px;
+    margin-top:10px;
+    text-decoration:none;
+    color:#166534;
+    font-weight:bold;
+}
+
+.social-links a i{
+    margin-right:8px;
+}
+
+.contact-info:hover .social-links a{
+    color:white;
+}
+
+/* BUTTONS */
+
+.btn{
+    display:inline-block;
+    margin-top:15px;
+    margin-right:10px;
+    padding:12px 25px;
+    background:#2563eb;
+    color:white;
+    text-decoration:none;
+    border-radius:30px;
+    transition:0.3s;
+}
+
+.btn:hover{
+    background:#1d4ed8;
+}
+
+.whatsapp-btn{
+    background:#25D366;
+}
+
+.whatsapp-btn:hover{
+    background:#1faa52;
+}
+
+/* FORM */
+
 .contact-form{
     background:white;
     padding:25px;
     border-radius:20px;
     box-shadow:0 5px 15px rgba(0,0,0,0.1);
+    transition:0.4s;
 }
 
-.contact-info img{
-    width:100%;
-    border-radius:15px;
+.contact-form:hover{
+    transform:translateY(-10px);
+    background:linear-gradient(135deg,#2563eb,#22c55e);
+    color:white;
+}
+
+.contact-form h2{
+    color:#166534;
     margin-bottom:20px;
 }
 
-.contact-info h2,
-.contact-form h2{
-    color:#166534;
-    margin-bottom:15px;
-}
-
-.info{
-    margin-top:20px;
-}
-
-.info a{
-    text-decoration:none;
-    color:#2563eb;
-}
-
-.social-links{
-    margin-top:25px;
-}
-
-.social-links a{
-    text-decoration:none;
-    margin-right:15px;
-    color:#166534;
-    font-weight:bold;
+.contact-form:hover h2,
+.contact-form:hover label{
+    color:white;
 }
 
 label{
@@ -147,7 +250,7 @@ textarea{
 
 input:focus,
 textarea:focus{
-    border-color:#166534;
+    border-color:#2563eb;
 }
 
 button{
@@ -156,7 +259,7 @@ button{
     background:#2563eb;
     color:white;
     border:none;
-    border-radius:25px;
+    border-radius:30px;
     cursor:pointer;
     transition:0.3s;
 }
@@ -172,20 +275,32 @@ footer{
     color:white;
     text-align:center;
     padding:20px;
+    margin-top:30px;
 }
 
-/* RESPONSIVE */
+/* TABLET */
+
+@media(max-width:992px){
+
+    .contact-container{
+        grid-template-columns:1fr;
+    }
+}
+
+/* MOBILE */
 
 @media(max-width:768px){
 
     .navbar{
         flex-direction:column;
         gap:10px;
+        padding:10px;
     }
 
     .navigation{
         flex-wrap:wrap;
         justify-content:center;
+        gap:10px;
     }
 
     .hero h1{
@@ -193,6 +308,29 @@ footer{
     }
 
     .contact-container{
-        grid-template-columns:1fr;
+        padding:20px;
+    }
+
+    .contact-info img{
+        height:200px;
+    }
+}
+
+/* SMALL PHONES */
+
+@media(max-width:480px){
+
+    .hero h1{
+        font-size:1.8rem;
+    }
+
+    .navigation a{
+        font-size:14px;
+    }
+
+    .btn{
+        display:block;
+        text-align:center;
+        margin-bottom:10px;
     }
 }

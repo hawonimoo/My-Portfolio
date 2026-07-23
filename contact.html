@@ -4,7 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact | Hawo Nimoo Farah</title>
+
     <link rel="stylesheet" href="contact.css">
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
 
@@ -31,25 +35,26 @@
 
 <section class="hero">
     <h1>Contact Me</h1>
-    <p>Let's connect and work together.</p>
+    <p>Let's Connect and Work Together</p>
 </section>
 
 <section class="contact-container">
 
     <div class="contact-info">
 
-        <img src="images.jpg" alt="Contact">
+        <img src="images.jpg" alt="Contact Image">
 
         <h2>Get In Touch</h2>
 
         <p>
             Feel free to contact me for collaborations,
-            mentorship, digital projects, training opportunities,
-            or professional networking.
+            projects, mentorship, training opportunities,
+            and professional networking.
         </p>
 
         <div class="info">
-            <h3>Email</h3>
+            <h3><i class="fas fa-envelope"></i> Email</h3>
+
             <p>
                 <a href="mailto:hawonimoo@gmail.com">
                     hawonimoo@gmail.com
@@ -58,33 +63,49 @@
         </div>
 
         <div class="info">
-            <h3>Phone</h3>
+            <h3><i class="fas fa-phone"></i> Phone</h3>
 
             <p>
-                <a href="tel:+254106473239">
+                <a href="https://wa.me/254106473239" target="_blank">
                     +254 106 473 239
                 </a>
             </p>
 
             <p>
-                <a href="tel:+254700326020">
+                <a href="https://wa.me/254700326020" target="_blank">
                     +254 700 326 020
                 </a>
             </p>
         </div>
 
         <div class="info">
-            <h3>Location</h3>
+            <h3><i class="fas fa-location-dot"></i> Location</h3>
             <p>Garsen, Tana River, Kenya</p>
         </div>
 
         <div class="social-links">
-            <a href="https://github.com/hawonimoo" target="_blank">GitHub</a>
 
-            <a href="https://www.linkedin.com/in/hawo-farah" target="_blank">LinkedIn</a>
+            <a href="https://github.com/hawonimoo" target="_blank">
+                <i class="fab fa-github"></i> GitHub
+            </a>
 
-            <a href="https://web.facebook.com/61590488966495/" target="_blank">Facebook</a>
+            <a href="https://www.linkedin.com/in/hawo-farah" target="_blank">
+                <i class="fab fa-linkedin"></i> LinkedIn
+            </a>
+
+            <a href="https://web.facebook.com/61590488966495/" target="_blank">
+                <i class="fab fa-facebook"></i> Facebook
+            </a>
+
         </div>
+
+        <a href="mailto:hawonimoo@gmail.com" class="btn">
+            <i class="fas fa-paper-plane"></i> Get In Touch
+        </a>
+
+        <a href="https://wa.me/254106473239" class="btn whatsapp-btn" target="_blank">
+            <i class="fab fa-whatsapp"></i> WhatsApp Me
+        </a>
 
     </div>
 
@@ -92,21 +113,23 @@
 
         <h2>Send a Message</h2>
 
-        <form action="mailto:hawonimoo@gmail.com" method="post" enctype="text/plain">
+        <form>
 
-            <label>Full Name</label>
-            <input type="text" placeholder="Enter your name" required>
+            <label for="name">Full Name</label>
+            <input type="text" id="name" placeholder="Enter your name">
 
-            <label>Email Address</label>
-            <input type="email" placeholder="Enter your email" required>
+            <label for="email">Email Address</label>
+            <input type="email" id="email" placeholder="Enter your email">
 
-            <label>Phone Number</label>
-            <input type="tel" placeholder="Enter your phone number">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" placeholder="Enter your phone number">
 
-            <label>Message</label>
-            <textarea rows="6" placeholder="Write your message" required></textarea>
+            <label for="message">Message</label>
+            <textarea id="message" rows="6" placeholder="Write your message"></textarea>
 
-            <button type="submit">Send Message</button>
+            <button type="submit">
+                <i class="fas fa-paper-plane"></i> Send Message
+            </button>
 
         </form>
 
